@@ -15,6 +15,7 @@ public class RoutingAndFilteringBookApplication {
 
 	@RequestMapping(value = "/available")
 	public String available() {
+		LOGGER.info("hi there");
 		return "Spring in Action";
 	}
 

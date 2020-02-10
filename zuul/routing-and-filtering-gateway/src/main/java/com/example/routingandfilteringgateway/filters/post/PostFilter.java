@@ -22,7 +22,7 @@ public class PostFilter extends ZuulFilter {
 
     @Override
     public int filterOrder() {
-        return 20;
+        return 1;
     }
 
     @Override
@@ -32,7 +32,10 @@ public class PostFilter extends ZuulFilter {
 
     @Override
     public Object run() throws ZuulException {
-        log.info(String.format("Post filter#%s in action.", this.filterOrder()));
+        RequestContext ctx = RequestContext.getCurrentContext();
+        HttpServletRequest request = ctx.getRequest();
+        log.info(String.format("%s filter#%s : %s request to %s with Request Header : %s",
+                this.filterType(), this.filterOrder(), request.getMethod(), request.getRequestURL().toString(), ctx.getZuulRequestHeaders()));
         return null;
     }
 }

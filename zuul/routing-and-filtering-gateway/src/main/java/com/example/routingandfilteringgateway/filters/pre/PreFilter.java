@@ -38,8 +38,8 @@ public class PreFilter extends ZuulFilter {
             String sessionId = UUID.randomUUID().toString();
             ctx.addZuulRequestHeader("TEST_HEADER", sessionId);
         }
-        log.info(String.format("Pre filter#%s : %s request to %s with Request Header : %s",
-                this.filterOrder(), request.getMethod(), request.getRequestURL().toString(), ctx.getZuulRequestHeaders()));
+        log.info(String.format("%s filter#%s : %s request to %s with Request Header : %s",
+                this.filterType(), this.filterOrder(), request.getMethod(), request.getRequestURL().toString(), ctx.getZuulRequestHeaders()));
         return null;
     }
 
