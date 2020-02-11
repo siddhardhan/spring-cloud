@@ -7,13 +7,13 @@ import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;
 
 @Component
-class BooksServiceFallback implements FallbackProvider {
+class BookServiceFallback implements FallbackProvider {
 
-    private static final String DEFAULT_MESSAGE = "books information not available.";
+    private static final String DEFAULT_MESSAGE = "book information not available.";
 
     @Override
     public String getRoute() {
-        return "books-service"; // or return null;
+        return "book-service"; // or return null;
     }
 
     @Override
