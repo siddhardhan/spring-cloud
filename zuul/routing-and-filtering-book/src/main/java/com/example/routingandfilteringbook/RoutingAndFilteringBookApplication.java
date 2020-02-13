@@ -14,17 +14,6 @@ public class RoutingAndFilteringBookApplication {
 
 	private static final Logger LOGGER= LoggerFactory.getLogger(RoutingAndFilteringBookApplication.class);
 
-	@RequestMapping(value = "/available", method = RequestMethod.GET)
-	public String available() {
-		LOGGER.info("hi there");
-		return "Spring in Action";
-	}
-
-	@RequestMapping(value = "/checked-out", method = RequestMethod.GET)
-	public String checkedOut() {
-		return "Spring Boot in Action";
-	}
-
 	public static void main(String[] args) {
 		try {
 			SpringApplication.run(RoutingAndFilteringBookApplication.class, args);

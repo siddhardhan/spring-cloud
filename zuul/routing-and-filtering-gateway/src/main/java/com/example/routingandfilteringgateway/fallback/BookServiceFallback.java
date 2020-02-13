@@ -13,7 +13,7 @@ class BookServiceFallback implements FallbackProvider {
 
     @Override
     public String getRoute() {
-        return "book-service"; // or return null;
+        return "books-service"; // or return null;
     }
 
     @Override

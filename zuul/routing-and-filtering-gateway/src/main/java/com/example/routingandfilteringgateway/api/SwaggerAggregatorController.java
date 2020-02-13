@@ -17,7 +17,7 @@ public class SwaggerAggregatorController implements SwaggerResourcesProvider {
     @Override
     public List get() {
         List resources = new ArrayList<>();
-        resources.add(swaggerResource("book-service", "/book/v2/api-docs", "2.0"));
+        resources.add(swaggerResource("books-service", "/books/v2/api-docs", "2.0"));
         return resources;
     }
 
