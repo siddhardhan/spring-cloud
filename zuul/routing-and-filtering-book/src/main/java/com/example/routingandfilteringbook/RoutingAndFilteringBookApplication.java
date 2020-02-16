@@ -8,13 +8,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class RoutingAndFilteringBookApplication {
 
-	private static final Logger LOGGER= LoggerFactory.getLogger(RoutingAndFilteringBookApplication.class);
+  private static final Logger LOGGER =
+      LoggerFactory.getLogger(RoutingAndFilteringBookApplication.class);
 
-	public static void main(String[] args) {
-		try {
-			SpringApplication.run(RoutingAndFilteringBookApplication.class, args);
-		} catch (Exception e) {
-		    LOGGER.info("Exception : {}", e.fillInStackTrace());
-		}
-	}
+  public static void main(String[] args) {
+    try {
+      SpringApplication.run(RoutingAndFilteringBookApplication.class, args);
+    } catch (Exception e) {
+      LOGGER.info("Exception : {}", e.fillInStackTrace());
+    }
+  }
 }
